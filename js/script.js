@@ -23,7 +23,116 @@ monogatari.action ('notification').notifications ({
 
 // Define the Particles JS Configurations used in the game
 monogatari.action ('particles').particles ({
-
+	'stars': {
+		'particles': {
+			'number': {
+				'value': 355,
+				'density': {
+					'enable': true,
+					'value_area': 789.1476416322727
+				}
+			},
+			'color': {
+				'value': '#ffffff'
+			},
+			'shape': {
+				'type': 'circle',
+				'stroke': {
+					'width': 0,
+					'color': '#000000'
+				},
+				'polygon': {
+					'nb_sides': 5
+				},
+				'image': {
+					'src': '',
+					'width': 100,
+					'height': 100
+				}
+			},
+			'opacity': {
+				'value': 0.48927153781200905,
+				'random': false,
+				'anim': {
+					'enable': true,
+					'speed': 0.2,
+					'opacity_min': 0,
+					'sync': false
+				}
+			},
+			'size': {
+				'value': 2,
+				'random': true,
+				'anim': {
+					'enable': true,
+					'speed': 2,
+					'size_min': 0,
+					'sync': false
+				}
+			},
+			'line_linked': {
+				'enable': false,
+				'distance': 150,
+				'color': '#ffffff',
+				'opacity': 0.4,
+				'width': 1
+			},
+			'move': {
+				'enable': true,
+				'speed': 0.2,
+				'direction': 'none',
+				'random': true,
+				'straight': false,
+				'out_mode': 'out',
+				'bounce': false,
+				'attract': {
+					'enable': false,
+					'rotateX': 600,
+					'rotateY': 1200
+				}
+			}
+		},
+		'interactivity': {
+			'detect_on': 'canvas',
+			'events': {
+				'onhover': {
+					'enable': true,
+					'mode': 'bubble'
+				},
+				'onclick': {
+					'enable': true,
+					'mode': 'push'
+				},
+				'resize': true
+			},
+			'modes': {
+				'grab': {
+					'distance': 400,
+					'line_linked': {
+						'opacity': 1
+					}
+				},
+				'bubble': {
+					'distance': 83.91608391608392,
+					'size': 1,
+					'duration': 3,
+					'opacity': 1,
+					'speed': 3
+				},
+				'repulse': {
+					'distance': 200,
+					'duration': 0.4
+				},
+				'push': {
+					'particles_nb': 4
+				},
+				'remove': {
+					'particles_nb': 2
+				}
+			}
+		},
+		'retina_detect': true
+	}
 });
 
 // Define the canvas objects used in the game
@@ -33,7 +142,21 @@ monogatari.action ('canvas').objects ({
 
 // Credits of the people involved in the creation of this awesome game
 monogatari.configuration ('credits', {
-
+	'Desenvolvedores': {
+		'HTML/CSS/JS/Dall-E': 'Anna Damasceno',
+		'HTML/CSS/JS/Monogatari': 'Sebastião Moura'
+	},
+	'História Original': {
+		'': 'Grahal'
+	},
+	'Música': {
+		'The Abandoned Manor': 'Geoff Harvey'
+	},
+	'Agradecimentos:': {
+		'Dall-E': 'Pelas sensacionais imagens',
+		'Grahal': 'Pela ótima história original',
+		'Hyuchia': 'Pelo excelente Monogatari'
+	}
 });
 
 
@@ -44,7 +167,7 @@ monogatari.assets ('gallery', {
 
 // Define the music used in the game.
 monogatari.assets ('music', {
-
+	'the-abandoned-manor-190673': 'the-abandoned-manor-190673.mp3'
 });
 
 // Define the voice files used in the game.
@@ -81,10 +204,6 @@ monogatari.characters ({
 	'Chief': {
 		name: 'Delegado',
 		color: '#5bcaff'
-	},	
-	'Note': {
-		name: 'Bilhete',
-		color: '#5bcaff'
 	}
 });
 
@@ -108,6 +227,8 @@ monogatari.assets ('scenes', {
 monogatari.script ({
 	// The game starts here.
 	'Start': [
+		'play music the-abandoned-manor-190673 with loop fade 4 volume 4',
+		'show particles stars',
 		'show scene #000000 with fadeIn',
 		'Você é Carlos Alexandre Bueno, um funcionário público. Trabalha no Banco do Brasil, não tem muitos amigos e nem visita os parentes com frequência - sendo que seus pais faleceram no último ano.',
 		'show scene letter with fadeIn',
@@ -150,7 +271,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'perguntar ao velho': {
 					'Text': 'Perguntar ao velho',
 					'Do': 'jump 27'
@@ -202,7 +323,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'fogo': {
 					'Text': 'Atacar a mulher com fogo do lampião',
 					'Do': 'jump 15'
@@ -229,7 +350,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'tentar': {
 					'Text': 'Tentar',
 					'Do': 'jump 26'
@@ -253,7 +374,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'seguir a procissão': {
 					'Text': 'Seguir a procissão',
 					'Do': 'jump 10'
@@ -276,7 +397,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'falar': {
 					'Text': 'Falar com eles',
 					'Do': 'jump 39'
@@ -330,7 +451,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'entrar no quarto': {
 					'Text': 'Entrar no quarto e se trancar lá dentro',
 					'Do': 'jump 11'
@@ -353,7 +474,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'pegar': {
 					'Text': 'Pegar a chave',
 					'Do': 'jump 38'
@@ -426,7 +547,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'fugir': {
 					'Text': 'Tentar fugir desses loucos e voltar a casa',
 					'Do': 'jump 2'
@@ -446,7 +567,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'floresta': {
 					'Text': 'Ir à floresta investigar a estranha procissão',
 					'Do': 'jump 10'
@@ -489,7 +610,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'procurar': {
 					'Text': 'Procurá-los',
 					'Do': 'jump 18'
@@ -509,7 +630,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'quebrar': {
 					'Text': 'Quebrar o medalhão',
 					'Do': 'jump 16'
@@ -547,7 +668,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'abrir a porta e ir ao porão': {
 					'Text': 'Abrir a porta e ir ao porão',
 					'Do': 'jump 4'
@@ -584,7 +705,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'ritual': {
 					'Text': 'Arriscar-se a ir à floresta para realizar o ritual',
 					'Do': 'jump 6'
@@ -608,7 +729,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'Acompanhá-los': {
 					'Text': 'Acompanhá-los',
 					'Do': 'jump 21'
@@ -644,7 +765,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'fogo': {
 					'Text': 'Atacar a mulher com fogo do lampião',
 					'Do': 'jump 15'
@@ -679,7 +800,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'fogo': {
 					'Text': 'Atacar a mulher com fogo do lampião',
 					'Do': 'jump 15'
@@ -729,7 +850,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'ficar': {
 					'Text': 'Ficar quietinho e esperar pelas onze da noite',
 					'Do': 'jump 30'
@@ -750,7 +871,7 @@ monogatari.script ({
 		'show scene #000000 with fadeIn',
 		{
 			'Choice': {
-				'Dialog': 'O que você decide fazer?',
+				'Dialog': 'O que fazer?',
 				'fugir': {
 					'Text': 'Fugir desta cidade insana',
 					'Do': 'jump 14'

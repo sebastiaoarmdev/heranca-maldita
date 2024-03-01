@@ -17,9 +17,14 @@
  * ===========================
 **/
 
+@font-face {
+	font-family: OldNewspaperTypes;
+	src: url('../assets/fonts/OldNewspaperTypes.ttf');	
+  }
+
 /* General Style */
 body {
-	font-family: 'Consolas', monospace;	
+	font-family: OldNewspaperTypes;	
 	padding: 8px;
 }
 
@@ -35,7 +40,7 @@ button:hover {
 
 /* General Styling for Menu Screens */
 [data-screen] {
-
+	
 }
 
 /**
@@ -46,8 +51,30 @@ button:hover {
 
 /* Main Menu Styling */
 [data-screen="main"] {
-
+	background-image: url("../assets/ui/door.png");
+	background-color: #000000; /* Used if the image is unavailable */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire */
+	animation: blink 10s infinite;
 }
+
+@keyframes blink {
+	98% {
+		background-image: url("../assets/ui/door.png");
+	}
+	99% {
+		background-image: url("../assets/ui/door-g.png");
+	}
+	100% {
+		background-image: url("../assets/ui/door.png");
+	}
+}
+
+[data-screen="main"] h1 {
+	color: #f7f7f7;
+	text-shadow: 1px 1px #000000;
+  }
 
 /* Main Menu Buttons Styling */
 [data-screen="main"] button {
@@ -56,6 +83,8 @@ button:hover {
 
 [data-screen="main"] button.initial {	
     all: initial;
+	color: #f7f7f7;
+	margin: 16px;
 }
 
 /**
