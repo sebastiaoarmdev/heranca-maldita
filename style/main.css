@@ -19,29 +19,25 @@
 
 @font-face {
 	font-family: OldNewspaperTypes;
-	src: url('../assets/fonts/OldNewspaperTypes.ttf');	
-  }
+	src: url('../assets/fonts/OldNewspaperTypes.ttf');
+}
 
 /* General Style */
 body {
-	font-family: OldNewspaperTypes;	
+	font-family: OldNewspaperTypes;
 	padding: 8px;
+	background: rgba(255, 255, 255, 1);
+	overflow-x: hidden;
 }
 
 /* Simple Button styles*/
-button {
-	
-}
+button {}
 
 /* Simple Button Style on Hover */
-button:hover {
-
-}
+button:hover {}
 
 /* General Styling for Menu Screens */
-[data-screen] {
-	
-}
+[data-screen] {}
 
 /**
  * ===========================
@@ -51,40 +47,45 @@ button:hover {
 
 /* Main Menu Styling */
 [data-screen="main"] {
-	background-image: url("../assets/ui/door.png");
-	background-color: #000000; /* Used if the image is unavailable */
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Do not repeat the image */
-	background-size: cover; /* Resize the background image to cover the entire */
+	background-image: url("../assets/ui/cover.png");
+	background-color: #000000;
+	/* Used if the image is unavailable */
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	/* Do not repeat the image */
+	background-size: cover;
+	/* Resize the background image to cover the entire */
 	animation: blink 10s infinite;
 }
 
 @keyframes blink {
 	98% {
-		background-image: url("../assets/ui/door.png");
+		background-image: url("../assets/ui/cover.png");
 	}
+
 	99% {
-		background-image: url("../assets/ui/door-g.png");
+		background-image: url("../assets/ui/cover-1.png");
 	}
+
 	100% {
-		background-image: url("../assets/ui/door.png");
+		background-image: url("../assets/ui/cover.png");
 	}
 }
 
 [data-screen="main"] h1 {
 	color: #f7f7f7;
 	text-shadow: 1px 1px #000000;
-  }
-
-/* Main Menu Buttons Styling */
-[data-screen="main"] button {
-	
 }
 
-[data-screen="main"] button.initial {	
-    all: initial;
+/* Main Menu Buttons Styling */
+[data-screen="main"] button {}
+
+[data-screen="main"] button.initial {
+	all: initial;
 	color: #f7f7f7;
 	margin: 16px;
+	z-index: 0;
 }
 
 /**
@@ -94,24 +95,16 @@ button:hover {
 **/
 
 /* Slots Style */
-[data-component="save-slot"] figure {
-
-}
+[data-component="save-slot"] figure {}
 
 /* Slot's Image Style */
-[data-component="save-slot"] img {
-
-}
+[data-component="save-slot"] img {}
 
 /* Slots Title Style */
-[data-component="save-slot"] figcaption {
-
-}
+[data-component="save-slot"] figcaption {}
 
 /* Slots Delete Button Style */
-[data-component="save-slot"] button {
-
-}
+[data-component="save-slot"] button {}
 
 /**
  * ===========================
@@ -125,9 +118,7 @@ button:hover {
 }
 
 /* Choice Button Style on Hover */
-[data-component="choice-container"] button:hover {
-
-}
+[data-component="choice-container"] button:hover {}
 
 /* Text Box styling */
 [data-component="text-box"] {
@@ -136,24 +127,16 @@ button:hover {
 }
 
 /* Character Name Style */
-[data-ui="who"] {
-
-}
+[data-ui="who"] {}
 
 /* Style for Centered Text */
-[data-component="centered-dialog"] {
-
-}
+[data-component="centered-dialog"] {}
 
 /* Character Images Styles */
-[data-screen="game"] [data-character] {
-
-}
+[data-screen="game"] [data-character] {}
 
 /* Other Images Styles */
-[data-screen="game"] [data-image] {
-
-}
+[data-screen="game"] [data-image] {}
 
 /**
  * ===========================
@@ -164,24 +147,16 @@ button:hover {
 /* These styles are applied to the Mobile version of the Quick Menu */
 
 /* Quick Menu Style */
-[data-component="quick-menu"] {
-
-}
+[data-component="quick-menu"] {}
 
 /* Quick Menu Buttons Style */
-[data-component="quick-menu"] span {
-
-}
+[data-component="quick-menu"] span {}
 
 /* Quick Menu Buttons Style on Hover */
-[data-component="quick-menu"] span:hover {
-
-}
+[data-component="quick-menu"] span:hover {}
 
 /* Quick Menu Buttons Icon Style */
-[data-component="quick-menu"] > span > .fa {
-
-}
+[data-component="quick-menu"]>span>.fa {}
 
 /**
  * ===========================
@@ -190,85 +165,376 @@ button:hover {
 **/
 
 /* Use the background property to set a color for these */
-input[type=range]:focus::-webkit-slider-runnable-track {
+input[type=range]:focus::-webkit-slider-runnable-track {}
 
-}
+input[type=range]::-webkit-slider-runnable-track {}
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type=range]:focus::-ms-fill-upper {}
 
-}
+input[type=range]:focus::-ms-fill-lower {}
 
-input[type=range]:focus::-ms-fill-upper {
+input[type=range]::-moz-range-track {}
 
-}
+input[type=range]::-ms-fill-lower {}
 
-input[type=range]:focus::-ms-fill-lower {
-
-}
-
-input[type=range]::-moz-range-track {
-
-}
-
-input[type=range]::-ms-fill-lower {
-
-}
-
-input[type=range]::-ms-fill-upper {
-
-}
+input[type=range]::-ms-fill-upper {}
 
 /** Medium Screens, Phablets (601px) **/
 @media screen and (min-width: 37.56255em) {
 	/* Styles for the desktop version of the Quick Menu */
 
 	/* Quick Menu Style */
-	[data-component="quick-menu"] {
-
-	}
+	[data-component="quick-menu"] {}
 
 	/* Quick Menu Buttons Style */
-	[data-component="quick-menu"] span {
-
-	}
+	[data-component="quick-menu"] span {}
 
 	/* Quick Menu Buttons Style on Hover */
-	[data-component="quick-menu"] span:hover {
-
-	}
+	[data-component="quick-menu"] span:hover {}
 }
 
 /** Medium Devices, Tablets (992px)**/
-@media screen and (min-width: 62em) {
-
-}
+@media screen and (min-width: 62em) {}
 
 /** HD Screen, Large Devices, Wide Screens, Desktop (1200px) **/
-@media screen and (min-width: 75em) {
-
-}
+@media screen and (min-width: 75em) {}
 
 /** Full HD Screen, Large Devices, Wide Screens, Large Desktops (1920px) **/
-@media screen and (min-width: 120em) {
-
-}
+@media screen and (min-width: 120em) {}
 
 /** Retina Screen , Large Devices, Wide Screens(2560px) **/
-@media screen and (min-width: 160em) {
-
-}
+@media screen and (min-width: 160em) {}
 
 /** 4k Screens, Large Devices, Wide Screens (3840px) **/
-@media screen and (min-width: 240em) {
-
-}
+@media screen and (min-width: 240em) {}
 
 /** 5k Screens, Large Devices, Wide Screens (5000px) **/
-@media screen and (min-width: 312.5em) {
-
-}
+@media screen and (min-width: 312.5em) {}
 
 /** 8k Screens, Large Devices, Wide Screens (8000px) **/
-@media screen and (min-width: 500em) {
+@media screen and (min-width: 500em) {}
 
+/** Fog **/
+#fog-layer-1,
+#fog-layer-2,
+#fog-layer-3 {
+	height: 100%;
+	position: absolute;
+	width: 200%;
+}
+
+#fog-layer-1 .image-1,
+#fog-layer-1 .image-2,
+#fog-layer-2 .image-1,
+#fog-layer-2 .image-2,
+#fog-layer-3 .image-1,
+#fog-layer-3 .image-2 {
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+
+#fog-layer-1 {
+	-webkit-animation: fog-layer-1-opacity 10s linear infinite, fog-layer-moveme 15s linear infinite;
+	-moz-animation: fog-layer-1-opacity 10s linear infinite, fog-layer-moveme 15s linear infinite;
+	animation: fog-layer-1-opacity 10s linear infinite, fog-layer-moveme 15s linear infinite;
+}
+
+#fog-layer-2,
+#fog-layer-3 {
+	-webkit-animation: fog-layer-2-opacity 21s linear infinite, fog-layer-moveme 13s linear infinite;
+	-moz-animation: fog-layer-2-opacity 21s linear infinite, fog-layer-moveme 13s linear infinite;
+	animation: fog-layer-2-opacity 21s linear infinite, fog-layer-moveme 13s linear infinite;
+}
+
+/** Moving Fog **/
+#fog-layer-1 .image-1,
+#fog-layer-1 .image-2 {
+	background: url("../assets/ui/fog-1.png") center center/cover no-repeat transparent;
+}
+
+#fog-layer-2 .image-1,
+#fog-layer-2 .image-2,
+#fog-layer-3 .image-1,
+#fog-layer-3 .image-2 {
+	background: url("../assets/ui/fog-2.png") center center/cover no-repeat transparent;
+}
+
+/** Keyframe Layer 1 **/
+@-webkit-keyframes fog-layer-1-opacity {
+	0% {
+		opacity: .1;
+	}
+	22% {
+		opacity: .5;
+	}
+	40% {
+		opacity: .28;
+	}
+	58% {
+		opacity: .4;
+	}
+	80% {
+		opacity: .16;
+	}
+	100% {
+		opacity: .1;
+	}
+}
+
+@-moz-keyframes fog-layer-1-opacity {
+	0% {
+		opacity: .1;
+	}
+	22% {
+		opacity: .5;
+	}
+	40% {
+		opacity: .28;
+	}
+	58% {
+		opacity: .4;
+	}
+	80% {
+		opacity: .16;
+	}
+	100% {
+		opacity: .1;
+	}
+}
+
+@-o-keyframes fog-layer-1-opacity {
+	0% {
+		opacity: .1;
+	}
+	22% {
+		opacity: .5;
+	}
+	40% {
+		opacity: .28;
+	}
+	58% {
+		opacity: .4;
+	}
+	80% {
+		opacity: .16;
+	}
+	100% {
+		opacity: .1;
+	}
+}
+
+@keyframes fog-layer-1-opacity {
+	0% {
+		opacity: .1;
+	}
+	22% {
+		opacity: .5;
+	}
+	40% {
+		opacity: .28;
+	}
+	58% {
+		opacity: .4;
+	}
+	80% {
+		opacity: .16;
+	}
+	100% {
+		opacity: .1;
+	}
+}
+
+/** Keyframe Layer 2 **/
+@-webkit-keyframes fog-layer-2-opacity {
+	0% {
+		opacity: .5;
+	}
+	25% {
+		opacity: .2;
+	}
+	50% {
+		opacity: .1;
+	}
+	80% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .5;
+	}
+}
+
+@-moz-keyframes fog-layer-2-opacity {
+	0% {
+		opacity: .5;
+	}
+	25% {
+		opacity: .2;
+	}
+	50% {
+		opacity: .1;
+	}
+	80% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .5;
+	}
+}
+
+@-o-keyframes fog-layer-2-opacity {
+	0% {
+		opacity: .5;
+	}
+	25% {
+		opacity: .2;
+	}
+	50% {
+		opacity: .1;
+	}
+	80% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .5;
+	}
+}
+
+@keyframes fog-layer-2-opacity {
+	0% {
+		opacity: .5;
+	}
+	25% {
+		opacity: .2;
+	}
+	50% {
+		opacity: .1;
+	}
+	80% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .5;
+	}
+}
+
+/** Keyframe Layer 3 **/
+@-webkit-keyframes fog-layer-3-opacity {
+	0% {
+		opacity: .8
+	}
+	27% {
+		opacity: .2;
+	}
+	52% {
+		opacity: .6;
+	}
+	68% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .8;
+	}
+}
+
+@-moz-keyframes fog-layer-3-opacity {
+	0% {
+		opacity: .8
+	}
+	27% {
+		opacity: .2;
+	}
+	52% {
+		opacity: .6;
+	}
+	68% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .8;
+	}
+}
+
+@-o-keyframes fog-layer-3-opacity {
+	0% {
+		opacity: .8
+	}
+	27% {
+		opacity: .2;
+	}
+	52% {
+		opacity: .6;
+	}
+	68% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .8;
+	}
+}
+
+@keyframes fog-layer-3-opacity {
+	0% {
+		opacity: .8;
+	}
+	27% {
+		opacity: .2;
+	}
+	52% {
+		opacity: .6;
+	}
+	68% {
+		opacity: .3;
+	}
+	100% {
+		opacity: .8;
+	}
+}
+
+/** Keyframe moveMe **/
+@-webkit-keyframes fog-layer-moveme {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+@-moz-keyframes fog-layer-moveme {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+@-o-keyframes fog-layer-moveme {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+@keyframes fog-layer-moveme {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+	#fog-layer-1 .image-1,
+	#fog-layer-1 .image-2,
+	#fog-layer-2 .image-1,
+	#fog-layer-2 .image-2,
+	#fog-layer-3 .image-1,
+	#fog-layer-3 .image-2 {
+		width: 100%;
+	}
 }
